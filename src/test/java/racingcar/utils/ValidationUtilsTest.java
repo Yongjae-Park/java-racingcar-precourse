@@ -23,18 +23,19 @@ public class ValidationUtilsTest {
     }
 
     @Test
-    @DisplayName("자동차_이름_입력값_크기_검증")
-    void 자동차_이름_입력값_크기_검증() {
-        assertThat(ValidationUtils.nameValidator("abcdef")).isFalse();
-        assertThat(ValidationUtils.nameValidator("James")).isTrue();
-        assertThat(ValidationUtils.nameValidator("")).isFalse();
-    }
-
-    @Test
     @DisplayName("입력제한_글자수_위반시_IllegalArgumentException_검증")
     void 입력제한_글자수_위반시_IllegalArgumentException_검증() {
         assertThrows(IllegalArgumentException.class, () -> {
             ValidationUtils.nameValidator("abcde");
+        });
+    }
+
+    @Test
+    @DisplayName("자동차_이름_구분자_검증")
+    void 자동차_이름_구분자_검증() {
+        String[] names = "Kim,Park,Lee|Yong".split(",");
+        assertThrows(IllegalArgumentException.class, () -> {
+            ValidationUtils.delimiterValidator(names);
         });
     }
 
