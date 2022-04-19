@@ -40,6 +40,15 @@ public class ValidationUtilsTest {
     }
 
     @Test
+    @DisplayName("n개의_자동차_이름_검증")
+    void n개의_자동차_이름_검증() {
+        String input = "Kim,Park,Lee|Yong";
+        assertThrows(IllegalArgumentException.class, () -> {
+            ValidationUtils.namesValidator(input);
+        });
+    }
+
+    @Test
     @DisplayName("입력값에_괄호_포함_확인_테스트")
     void 입력값에_괄호_포함_확인_테스트() {
         String value = "(1,2)";
