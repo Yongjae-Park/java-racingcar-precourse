@@ -56,4 +56,11 @@ public class ValidationUtilsTest {
         assertThat("1,2").isEqualTo(value.substring(1,length-1));
     }
 
+    @Test
+    @DisplayName("턴횟수_입력값_검증")
+    void 턴횟수_입력값_검증() {
+        assertThat(ValidationUtils.turnValueValidator("0")).isFalse();
+        assertThat(ValidationUtils.turnValueValidator("1")).isTrue();
+        assertThat(ValidationUtils.turnValueValidator("k")).isFalse();
+    }
 }
