@@ -33,3 +33,5 @@
 
 ### ValidationUtils
 * 사용자 입력값 검증을 담당하는 utils클래스
+### Message
+* console 출력 메시지를 정의하는 enum
