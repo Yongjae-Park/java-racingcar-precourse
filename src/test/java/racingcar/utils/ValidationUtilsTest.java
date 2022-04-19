@@ -4,6 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ValidationUtilsTest {
 
@@ -28,4 +29,21 @@ public class ValidationUtilsTest {
         assertThat(ValidationUtils.nameValidator("James")).isTrue();
         assertThat(ValidationUtils.nameValidator("")).isFalse();
     }
+
+    @Test
+    @DisplayName("입력제한_글자수_위반시_IllegalArgumentException_검증")
+    void 입력제한_글자수_위반시_IllegalArgumentException_검증() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            ValidationUtils.nameValidator("abcde");
+        });
+    }
+
+    @Test
+    @DisplayName("입력값에_괄호_포함_확인_테스트")
+    void 입력값에_괄호_포함_확인_테스트() {
+        String value = "(1,2)";
+        int length = value.length();
+        assertThat("1,2").isEqualTo(value.substring(1,length-1));
+    }
+
 }
