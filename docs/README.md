@@ -35,3 +35,5 @@
 * 사용자 입력값 검증을 담당하는 utils클래스
 ### Message
 * console 출력 메시지를 정의하는 enum
+### RandomNumber
+* 0~9 범위의 랜덤 숫자 생성을 담당하는 클래스
