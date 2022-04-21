@@ -1,10 +1,6 @@
 package racingcar.domain.car;
 
 import racingcar.domain.Message;
-import racingcar.utils.ValidationUtils;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class CarName {
     private static final int MIN_NAME_LENGTH = 1;
@@ -28,14 +24,14 @@ public class CarName {
     }
 
     private void delimiterValidator(String[] names) {
-        for(String name : names){
+        for (String name : names) {
             nameValidator(name);
         }
     }
 
     private void nameValidator(String name) {
         boolean isValidatedName = (name.length() <= MAX_NAME_LENGTH) && (name.length() >= MIN_NAME_LENGTH);
-        if(!isValidatedName)
+        if (!isValidatedName)
             throw new IllegalArgumentException(Message.ERROR_CAR_NAME_OVERSIZE_MESSAGE.getMessage());
     }
 
