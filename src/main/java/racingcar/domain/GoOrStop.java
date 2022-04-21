@@ -4,7 +4,7 @@ public enum GoOrStop {
     GO, STOP;
 
     public boolean isGo() {
-        return this != GO;
+        return this == GO;
     }
 
     public boolean isStop() {
