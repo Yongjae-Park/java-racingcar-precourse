@@ -16,8 +16,11 @@ public class Turn {
     }
 
     public boolean isOver() {
-        currentTurn++;
         return currentTurn >= turnValue;
+    }
+
+    public void increaseCurrentTurn() {
+        currentTurn++;
     }
 
     public int getTurnValue() {
