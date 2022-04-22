@@ -11,8 +11,9 @@ public class Turn {
         this.currentTurn = ZERO_BASE;
     }
 
-    public static boolean turnValueValidator(int turnValue) {
-        return turnValue >= 1;
+    private void turnValueValidator(int turnValue) {
+        if (Integer.valueOf(turnValue) < 1)
+            throw new IllegalArgumentException();
     }
 
     public boolean isOver() {

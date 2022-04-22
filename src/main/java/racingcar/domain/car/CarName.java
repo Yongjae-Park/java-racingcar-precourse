@@ -32,7 +32,7 @@ public class CarName {
     private void nameValidator(String name) {
         boolean isValidatedName = (name.length() <= MAX_NAME_LENGTH) && (name.length() >= MIN_NAME_LENGTH);
         if (!isValidatedName)
-            throw new IllegalArgumentException(Message.ERROR_CAR_NAME_OVERSIZE_MESSAGE.getMessage());
+            throw new IllegalArgumentException();
     }
 
     public String getName() {

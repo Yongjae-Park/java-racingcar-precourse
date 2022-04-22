@@ -3,14 +3,22 @@ package racingcar.domain;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TurnTest {
+
+    private final String TURN_VALUE_REGEX = "^[1-9]+$";
+
     @Test
     @DisplayName("턴횟수_입력값_검증")
     void 턴횟수_입력값_검증() {
-        assertThat(Turn.turnValueValidator(0)).isFalse();
-        assertThat(Turn.turnValueValidator(1)).isTrue();
-        assertThat(Turn.turnValueValidator(-1)).isFalse();
+        assertThrows(IllegalArgumentException.class, () -> {
+//            Turn.turnValueValidator("0");
+            new Turn(0);
+        });
+        assertThrows(IllegalArgumentException.class, () -> {
+//            Turn.turnValueValidator("-1");
+            new Turn(-1);
+        });
     }
 }

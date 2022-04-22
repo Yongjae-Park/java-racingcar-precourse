@@ -44,6 +44,7 @@
   + 자동차 위치값을 포장한 클래스
 + Input
   + 사용자 입력처리를 담당하는 클래스
+  + IllegalArgumentException catch 하여 다시 입력받도록 구현
 + Output
   + 메시지 출력을 담당하는 클래스
 + Turn
