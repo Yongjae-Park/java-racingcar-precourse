@@ -1,7 +1,10 @@
-package racingcar.domain;
+package racingcar.domain.racing;
 
 import racingcar.domain.car.Car;
 import racingcar.domain.car.Cars;
+import racingcar.domain.result.GoOrStop;
+import racingcar.domain.result.Result;
+import racingcar.domain.result.WinNames;
 
 import java.util.ArrayList;
 import java.util.Collections;

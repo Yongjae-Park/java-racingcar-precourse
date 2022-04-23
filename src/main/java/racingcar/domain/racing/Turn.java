@@ -1,4 +1,4 @@
-package racingcar.domain;
+package racingcar.domain.racing;
 
 public class Turn {
     private final int ZERO_BASE = 0;

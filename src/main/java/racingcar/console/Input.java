@@ -1,8 +1,8 @@
 package racingcar.console;
 
 import camp.nextstep.edu.missionutils.Console;
-import racingcar.domain.Message;
-import racingcar.domain.Turn;
+import racingcar.domain.racing.Message;
+import racingcar.domain.racing.Turn;
 import racingcar.domain.car.CarName;
 
 public class Input {

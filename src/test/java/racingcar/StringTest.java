@@ -2,7 +2,7 @@ package racingcar;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import racingcar.domain.WinNames;
+import racingcar.domain.result.WinNames;
 
 import java.util.Arrays;
 import java.util.List;

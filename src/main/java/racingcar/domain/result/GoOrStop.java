@@ -1,4 +1,4 @@
-package racingcar.domain;
+package racingcar.domain.result;
 
 public enum GoOrStop {
     GO, STOP;

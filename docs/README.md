@@ -32,28 +32,44 @@
 * 모든 원시값과 문자열을 포장하는 규칙을 지켰는지 확인한다.
 
 ### 구현 클래스
-+ Message
-  + console 출력 메시지를 정의하는 enum
-+ RandomNumber
-  + 0~9 범위의 랜덤 숫자 생성을 담당하는 클래스
-+ Car
-  + 경주용 자동차를 정의한 클래스
-+ CarName
-  + 자동차 이름을 포장한 클래스
-+ CarPosition
-  + 자동차 위치값을 포장한 클래스
-+ Input
-  + 사용자 입력처리를 담당하는 클래스
-  + IllegalArgumentException catch 하여 다시 입력받도록 구현
-+ Output
-  + 메시지 출력을 담당하는 클래스
-+ Turn
-  + 경주 턴 횟수 값을 포장한 클래스
-+ Referee 
-  + 게임 진행을 담당하는 클래스
-  + 매 턴마다 참가 자동차의 전진, 멈춤을 업데이트
-  + 게임 종료 후 우승자 선별 담당
-+ Result
-  + 게임 결, 공동우승 처리를 담당하는 클래스
-+ WinNames
-  + 우승자 이름 List를 포장한 클래스
++ car
+  + > Car 객체 관련 패키지
+  + Car
+    + 경주용 자동차를 정의한 클래스
+  + CarName
+    + 자동차 이름을 포장한 클래스
+  + CarPosition
+    + 자동차 위치값을 포장한 클래스
+  + Cars
+    + List<Car> 를 포장한 일급 콜렉션 클래스
+  + CarGenerator
+    + 자동차 이름 입력에 따라 Cars를 생성을 담당하는 클래스
++ console
+  + > 사용자 입출력 인터페이스 관련 패키지
+  + Input
+    + 사용자 입력처리를 담당하는 클래스
+    + IllegalArgumentException catch 하여 다시 입력받도록 구현
+  + Output
+    + 메시지 출력을 담당하는 클래스
++ racing
+  + > 경주게임 진행 관련 패키지
+  + Racing
+    + 게임 전체 진행을 담당하는 클래스
+  + Message
+    + console 출력 메시지를 정의하는 enum
+  + RandomNumber
+    + 0~9 범위의 랜덤 숫자 생성을 담당하는 클래스
+  + Turn
+    + 경주 턴 횟수 값을 포장한 클래스
+  + Referee 
+    + 게임 진행을 담당하는 클래스
+    + 매 턴마다 참가 자동차의 전진, 멈춤을 업데이트
+    + 게임 종료 후 우승자 선별 담당
++ result
+  + > 게임 결과 관련 패키지
+  + Result
+    + 게임 결, 공동우승 처리를 담당하는 클래스
+  + WinNames
+    + 우승자 이름 List를 포장한 클래스
+  + GoOrStop
+    + 자동차의 전진, 멈춤 정의한 enum
