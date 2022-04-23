@@ -1,15 +1,12 @@
 package racingcar.domain.car;
 
-import racingcar.domain.Message;
-
 public class CarName {
     private static final int MIN_NAME_LENGTH = 1;
     private static final int MAX_NAME_LENGTH = 5;
     private final static String DELIMITER = ",";
     private final String name;
 
-
-    public CarName(final String name) {
+    public CarName(String name) {
         validateName(name);
         this.name = name;
     }
