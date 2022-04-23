@@ -13,11 +13,9 @@ public class TurnTest {
     @DisplayName("턴횟수_입력값_검증")
     void 턴횟수_입력값_검증() {
         assertThrows(IllegalArgumentException.class, () -> {
-//            Turn.turnValueValidator("0");
             new Turn(0);
         });
         assertThrows(IllegalArgumentException.class, () -> {
-//            Turn.turnValueValidator("-1");
             new Turn(-1);
         });
     }
