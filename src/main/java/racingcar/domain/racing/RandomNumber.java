@@ -15,7 +15,4 @@ public class RandomNumber {
         return Randoms.pickNumberInRange(MIN_NUMBER, MAX_NUMBER);
     }
 
-    public int getRandomNumber() {
-        return randomNumber;
-    }
 }
