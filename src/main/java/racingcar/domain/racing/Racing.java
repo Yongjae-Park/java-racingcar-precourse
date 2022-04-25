@@ -21,8 +21,7 @@ public class Racing {
             turn.increaseCurrentTurn();
             printTurnOverResult();
         }
-        String winners = referee.whoWin();
-        Output.printMessage(Message.WINNER_MESSAGE.getMessage() + winners);
+        Output.printMessage(Message.WINNER_MESSAGE.getMessage() + referee.whoWin());
     }
 
     public void play() {
